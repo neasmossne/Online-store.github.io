@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { useAuthStore } from '../stores/auth'
 import CustomerLayout from '../layouts/CustomerLayout.vue'
 import AdminLayout from '../layouts/AdminLayout.vue'
@@ -24,7 +24,7 @@ import DeliveryManageView from '../views/admin/DeliveryManageView.vue'
 import ReportsView from '../views/admin/ReportsView.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   scrollBehavior: () => ({ top: 0 }),
   routes: [
     { path: '/', component: CustomerLayout, children: [
